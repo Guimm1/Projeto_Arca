@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denunciar maus-tratos - Programa Arca</title>
+    <link rel="icon" type="image/png" href="./images/dog.png">
+    <link rel="stylesheet" href="maus_tratos.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="adocao.html"><img src="./images/Logo-ArcaTransparente.png" alt="Logo ARCA"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="tutor.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="about_us.html">Sobre nós</a></li>
+                <li><a href="index.html" class="btn-entrar">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <h1 class="page-title">Denunciar maus-tratos</h1>
+
+        <div class="actions-top">
+            <button class="btn-clear">Limpar</button>
+            <button class="btn-submit">Enviar Denúncia</button>
+        </div>
+
+        <form class="report-form">
+            <div class="left-column">
+                <div class="panel">
+                    <h2>Informações sobre o caso</h2>
+                    <div class="row">
+                        <label>Tipo de ocorrência
+                            <select>
+                                <option>— Selecione —</option>
+                                <option>Maus-tratos</option>
+                                <option>Abandono</option>
+                                <option>Ferimento</option>
+                            </select>
+                        </label>
+                        <label>Data (aprox.)
+                            <input type="date">
+                        </label>
+                    </div>
+
+                    <div class="row">
+                        <label>Local da ocorrência
+                            <input type="text" placeholder="Rua, número, referência">
+                        </label>
+                        <label>Cidade
+                            <input type="text" placeholder="Cidade">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h2>Seus dados</h2>
+                    <div class="row">
+                        <label>Nome
+                            <input type="text" placeholder="Seu nome">
+                        </label>
+                        <label>Telefone
+                            <input type="tel" placeholder="(00) 00000-0000">
+                        </label>
+                        <label>Email
+                            <input type="email" placeholder="seu@email.com">
+                        </label>
+                    </div>
+                    <label class="checkbox-inline"><input type="checkbox"> Tornar denúncia anônima</label>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="panel">
+                    <h2>Informações sobre o(s) animal(is)</h2>
+                    <div class="row">
+                        <label>Espécie
+                            <select>
+                                <option>— Selecione —</option>
+                                <option>Cão</option>
+                                <option>Gato</option>
+                                <option>Outro</option>
+                            </select>
+                        </label>
+                        <label>Quantidade de animais
+                            <input type="number" min="1" placeholder="0">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h2>Enviar fotos ou vídeos (opcional)</h2>
+                    <div class="file-box">
+                        <p>Arraste arquivos aqui ou
+                            <label class="file-label">clique para anexar
+                                <input type="file" multiple>
+                            </label>
+                        </p>
+                        <div class="file-preview">Pré-visualização</div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Programa Arca. Animais Resgatados, Cuidados e Acolhidos.</p>
+    </footer>
+
+</body>
+
+</html>

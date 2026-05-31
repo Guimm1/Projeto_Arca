@@ -1,0 +1,54 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e67e22;
+    --background-light: #F4F8F9;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --border-color: #6e336db9;
+    --danger-color: #c0392b;
+}
+
+* {box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+
+body {background: var(--background-light); color: var(--text-dark); display: flex; flex-direction: column; min-height: 100vh}
+
+header {background-color: var(--primary-color); padding: 1rem 5%; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--border-color)}
+.logo img{width:250px}
+nav ul{display:flex; list-style:none; gap:1.2rem}
+nav a{color:var(--text-light); text-decoration:none; font-weight:600}
+nav a.btn-entrar{background:var(--accent-color); padding:0.5rem 1rem; border-radius:20px}
+
+.container{max-width:1200px; margin:1.5rem auto; padding:0 1rem; flex:1}
+.page-title{font-size:1.8rem; color:var(--primary-color); margin-bottom:1rem}
+
+.actions-top{display:flex; justify-content:flex-end; gap:0.8rem; margin-bottom:1rem}
+.actions-top .btn-clear, .actions-top .btn-submit{padding:0.55rem 1rem; border-radius:6px; border:1px solid var(--border-color); cursor:pointer}
+.actions-top .btn-submit{background:var(--accent-color); color:var(--text-light); border:none}
+
+.report-form{display:grid; grid-template-columns:1fr 420px; gap:1rem}
+
+.panel{background:var(--text-light); border:1px solid var(--border-color); padding:1rem; border-radius:6px}
+.panel h2{font-size:1.05rem; color:var(--primary-color); margin-bottom:0.8rem}
+
+.row{display:flex; gap:0.8rem; margin-bottom:0.8rem}
+.row label{flex:1; display:flex; flex-direction:column; font-size:0.9rem}
+.row input[type="text"], .row input[type="email"], .row input[type="tel"], .row input[type="number"], .row input[type="date"], .row select{padding:0.45rem; border:1px solid #ccc; border-radius:4px}
+
+.left-column{display:flex; flex-direction:column; gap:1rem}
+.right-column{display:flex; flex-direction:column; gap:1rem}
+
+.checkbox-inline{display:flex; align-items:center; gap:0.5rem; margin-top:0.5rem; font-size:0.95rem}
+
+.file-box{height:180px; border:1px dashed #bbb; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.6rem; border-radius:6px; background:#fafafa}
+.file-box p{font-size:0.95rem}
+.file-label{color:var(--accent-color); cursor:pointer}
+.file-label input{display:none}
+.file-preview{width:90%; height:70px; background:#f0f0f0; border-radius:4px; display:flex; align-items:center; justify-content:center; color:#888}
+
+footer{background:var(--primary-color); color:var(--text-light); padding:16px; text-align:center}
+
+@media (max-width: 900px){
+    .report-form{grid-template-columns:1fr;}
+    .actions-top{justify-content:space-between}
+    .logo img{width:200px}
+}
