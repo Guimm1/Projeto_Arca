@@ -141,6 +141,26 @@ nav a:hover, nav a.active {
     border-radius: 4px;
 }
 
+.termo-adocao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.termo-adocao input[type="checkbox"] {
+    width: auto;
+}
+
+.termo-adocao a {
+    color: #2e7d32;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.termo-adocao a:hover {
+    text-decoration: underline;
+}
 
 .btn-submit {
     background-color: #2c3e50;

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendar Tratamento | Projeto Arca</title>
+    <link rel="stylesheet" href="tratamentos.css">
+    <link rel="icon" type="image/png" href="./images/dog.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="./images/Logo-ArcaTransparente.png" alt=""></div>
+        <nav>
+            <ul>
+                <li><a href="tutor.html" class="active">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="about_us.html">Sobre nós</a></li>
+                <li><a href="index.html" class="btn-entrar">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+  <main class="container">
+    <h1>Agendar Tratamento</h1>
+    <p class="note">Preencha os campos abaixo para solicitar agendamento de tratamento para o animal.</p>
+
+    <form id="formTratamento" onsubmit="return validarForm()">
+      <div class="grid">
+        <div>
+          <label for="nome">Nome do Animal</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Thor">
+        </div>
+
+        <div>
+          <label for="especie">Espécie</label>
+          <select id="especie" name="especie">
+            <option value="">Selecione</option>
+            <option>Cachorro</option>
+            <option>Gato</option>
+            <option>Outro</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="tipo">Tipo de Tratamento</label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecione</option>
+            <option>Consulta</option>
+            <option>Vacinação</option>
+            <option>Castração</option>
+            <option>Cirurgia</option>
+            <option>Exame</option>
+            <option>Outro</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="local">Local (clínica / endereço)</label>
+          <input type="text" id="local" name="local" placeholder="Ex.: Clínica Animal Feliz">
+        </div>
+
+        <div>
+          <label for="data">Data</label>
+          <input type="date" id="data" name="data">
+        </div>
+
+        <div>
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" name="hora">
+        </div>
+
+        <div class="full">
+          <label for="responsavel">Nome do Responsável / Telefone</label>
+          <input type="text" id="responsavel" name="responsavel" placeholder="Nome e telefone para contato">
+        </div>
+
+        <div class="full">
+          <label for="observacoes">Observações</label>
+          <textarea id="observacoes" name="observacoes" placeholder="Informações relevantes (alergias, medicações, comportamentos etc.)"></textarea>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn secondary" onclick="window.history.back()">Voltar</button>
+        <button type="submit" class="btn">Solicitar Agendamento</button>
+      </div>
+    </form>
+  </main>
+  <footer>
+        <p>&copy; 2026 Projeto Arca. Todos os direitos reservados.</p>
+        <img src="./images/BRASAO_PREF_SERRA_HORIZONTAL_NEGATIVA.png" alt="" style="display:flex; width: 150px;">
+    </footer>
+
+  <script>
+    function validarForm(){
+      const nome = document.getElementById('nome').value.trim();
+      const especie = document.getElementById('especie').value;
+      const tipo = document.getElementById('tipo').value;
+      const data = document.getElementById('data').value;
+      const responsavel = document.getElementById('responsavel').value.trim();
+
+      if(!nome){alert('Por favor, informe o nome do animal.');document.getElementById('nome').focus();return false}
+      if(!especie){alert('Selecione a espécie.');document.getElementById('especie').focus();return false}
+      if(!tipo){alert('Selecione o tipo de tratamento.');document.getElementById('tipo').focus();return false}
+      if(!data){alert('Selecione a data do agendamento.');document.getElementById('data').focus();return false}
+      if(!responsavel){alert('Informe o nome do responsável e telefone.');document.getElementById('responsavel').focus();return false}
+
+      
+      alert('Agendamento solicitado com sucesso!');
+      return false; 
+    }
+  </script>
+</body>
+</html>
